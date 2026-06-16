@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Embedded Site</title>
+    <style>
+        /* Modern Animated Gradient Background */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Sleek Browser Window Container */
+        .mockup-window {
+            width: 90%;
+            max-width: 1200px;
+            height: 85vh;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* macOS Style Top Bar */
+        .window-header {
+            background: #f1f3f5;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Colorful Window Buttons */
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot.red { background-color: #ff5f56; }
+        .dot.yellow { background-color: #ffbd2e; }
+        .dot.green { background-color: #27c93f; }
+
+        /* Fake URL Bar */
+        .url-bar {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 4px 12px;
+            font-size: 12px;
+            color: #6b7280;
+            margin-left: 15px;
+            flex-grow: 1;
+            max-width: 300px;
+            user-select: none;
+        }
+
+        /* The iframe embedding the site */
+        .content-frame {
+            width: 100%;
+            flex-grow: 1;
+            border: none;
+            background-color: #f8fafc; /* light background before load */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Browser Mockup Container -->
+    <div class="mockup-window">
+        
+        <!-- Top Bar with Buttons -->
+        <div class="window-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <div class="url-bar">arena.site/019ecee4...</div>
+        </div>
+
+        <!-- The Embedded Website -->
+        <iframe 
+            class="content-frame" 
+            src="https://019ecee4-3169-7243-aad8-a6a5f23af381.arena.site/" 
+            title="Embedded Arena Site">
+        </iframe>
+
+    </div>
+
+</body>
+</html>
